@@ -1,0 +1,252 @@
+.red-text {
+    color: red;
+  }
+  
+  .green-text {
+    color: #28f728;
+  }
+  
+  .orange-text {
+    color: rgb(246, 135, 9);
+  }
+  
+  .yelow-text {
+    color: rgb(227, 243, 6);
+  }
+  
+  .green-yelow-text {
+    color: green;
+  }
+  .prueba:hover {
+    color: purple;
+  }
+  
+  .Topbar {
+    color: #2ed2e6;
+    background-color: rgb(13, 2, 33);
+    box-shadow: 0 10px 15px #2ed2e6;
+    position: relative;
+    z-index: -1;
+  }
+  
+  .Topbar h1 {
+    margin-top: 0;
+    padding-bottom: 20px;
+    text-shadow: 3px 5px 2px #177a87, 4px 6px 2px #2ed2e6;
+  }
+  
+  .ParentComponent {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+  
+  .CodeEditor {
+    width: 50%;
+    margin: 0 0 0 5%;
+  }
+  
+  .CodeEditor2 {
+    width: 100%;
+    height: 430px;
+    margin-left: 30px;
+  }
+  .CodeEditor form {
+    text-align: center;
+    border: 5px ridge #2ed2e6;
+    padding: 0 0 15px 0;
+    box-sizing: border-box;
+  }
+  .CodeEditor2 form {
+    margin-left: 55px;
+    margin-right: 10px;
+    text-align: center;
+    border: 5px ridge #2ed2e6;
+    padding: 0 0 15px 0;
+    height: 440px;
+    width: 700px;
+    box-sizing: border-box;
+  }
+  .CodeEditor form input[type="submit"] {
+    padding: 10px;
+    background-color: #2ed2e6;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .CodeEditor2 form input[type="submit"] {
+    padding: 10px;
+    background-color: #2ed2e6;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin-top: 135px;
+  }
+  .Editor {
+    width: 100%;
+    height: 400px;
+    padding: 5px;
+  }
+  
+  .Results {
+    width: 40%;
+    margin-left: 5%;
+  }
+  .Results h3 {
+    text-align: center;
+  }
+  
+  /* This is what determines the height of the Results Component */
+  .enside {
+    text-align: start;
+    /* USE THIS WIDTH IF .RESULTS RIGHT MARGIN NEEDS TO CHANGE */
+    width: 90%;
+    height: 430px;
+    overflow-y: scroll;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  .enside::-webkit-scrollbar {
+    width: 20px;
+  }
+  .enside::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(gray, red, white);
+  }
+  
+  .Results ol li::marker {
+    color: #2ed2e6;
+    text-shadow: 2px 2px 2px #03454e;
+  }
+  .Results ol li {
+    font-size: 23px;
+    padding-left: 15px;
+  }
+  .Results li {
+    padding-top: 0;
+  }
+  .Results span {
+    display: block;
+    text-align: left;
+  
+    font-family: "Lato", "Lucida Grande, sans-serif";
+    font-weight: bold;
+  }
+  .Results .enside span:last-of-type {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #2ed2e6;
+  }
+  .Results .enside span:nth-of-type(2) {
+    font-size: 20px;
+  }
+  .Results span:first-of-type {
+    padding-bottom: 3px;
+  }
+  
+  .statsComponent {
+    width: 50%;
+  }
+  
+  .reportPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .charts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 95%;
+    min-width: 300px;
+  }
+  
+  .starts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-right: 0;
+  }
+  .starts p {
+    margin-top: 38px;
+    color: rgb(213, 233, 190);
+    margin-left: -350px;
+    margin-bottom: -60px;
+  }
+  .secondStars {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-right: 0;
+    margin-top: -130px;
+  }
+  
+  .bothcomponent {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    margin-bottom: 80px;
+    padding: 10px;
+  }
+  
+  .solution {
+    border: 5px ridge #2ed2e6;
+  }
+  
+  .reportForms {
+    width: 50%;
+    min-width: 300px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .moreInfo {
+    width: 50%;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .ParentComponent {
+      justify-content: space-around;
+    }
+    .bothcomponent {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    .ParentComponent {
+      flex-direction: column;
+      align-items: center;
+    }
+    .CodeEditor {
+      width: 80%;
+    }
+    .Results {
+      width: 85%;
+    }
+  }
+  
+  @media screen and (max-width: 340px) {
+    .logoType {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
