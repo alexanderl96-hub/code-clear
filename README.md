@@ -18,6 +18,7 @@ Code Clear is an unique app that supports the user's growth as a coder by giving
 
 ## Technical Description
 
+The user will import code that will be passed to the back-end, where the code is analyzed through an ESlinter function. This function will use the inputted code to obtain the errors results that will be send back to the front-end. When the user is logged into an account, the user's data will be stored in the back-end to produce multiple report charts for the front-end.
 
 ![Reports](https://media.giphy.com/media/ni4JjNQBUUsdWMVixH/giphy.gif)
 
