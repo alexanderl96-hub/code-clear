@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { userReauthenticate, userDeleteAccount } from '../../Services/Firebase';
 import axios from "axios";
-import { apiURL } from "../../util/apiURL";
+import { apiURL } from "../../server/apiURL";
 
 const API = apiURL();
 

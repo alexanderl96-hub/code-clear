@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { CSSTransition } from "react-transition-group";
 
 import { userAccountSignIn, userProviderSignIn, userSignOut } from '../../Services/Firebase';
@@ -28,7 +28,7 @@ export default function DropdownMenu(props) {
     const dropdownRef = useRef(null);
     const [userInfo, setUserInfo] = useState({ email: "", password: "" });
     const [error, setError] = useState("");
-    const history = useHistory();
+    const navigate = useNavigate();
 
     useEffect(() => {
         setMenuHeight(dropdownRef.current?.firstChild.offsetHeight);
@@ -40,7 +40,7 @@ export default function DropdownMenu(props) {
     }
 
     const goToReport = () => {
-        history.push("/report");
+        navigate("/report")
         props.setOpen(false);
     }
 
@@ -74,7 +74,7 @@ export default function DropdownMenu(props) {
     }
 
     return (
-        <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}>
+        <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}   onMouseLeave={() => props.setOpen(false)} >
             <CSSTransition
                 in={activeMenu === "main"}
                 unmountOnExit

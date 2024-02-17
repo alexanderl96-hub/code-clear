@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-// import { useHistory } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import Chart from "react-google-charts";
 import { apiURL } from "../server/apiURL";
@@ -25,12 +24,10 @@ export default function Report() {
     barChart: "",
   });
 
-//   const history = useHistory();
   const navigate = useNavigate();
   const user = useContext(UserContext);
 
   useEffect(() => {
-    // if (!user) return history.push("/");
     if (!user) return navigate("/");
 
     axios.get(`${API}/stats?uid=${user.uid}`).then((response) => {

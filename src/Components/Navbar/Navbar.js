@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { UserContext } from '../../Providers/UserProvider';
+import { UserContext } from '../../Providers/UserProviders';
 import DropdownMenu from './DropDownMenu';
 
 import { ReactComponent as IcAccounts } from "../../Assets/icons/accounts.svg";
@@ -27,13 +27,21 @@ export default function Navbar() {
                     {user ? <span className="txt-white">Hi <span className="msg-username" onClick={() => setOpen(!open)}>{user.displayName}!</span></span> : <span className="txt-white">Hello Guest.</span>}
                 </li>
                 {!user && (
-                    <li className="msg-login" onClick={() => setOpen(!open)}>Sign In/Register</li>
+                    <li className="msg-login" 
+                        onClick={() => setOpen(!open)}
+                        >Sign In/Register</li>
                 )}
                 <li className="nav-item">
-                    <div className="icon-button" onClick={() => setOpen(!open)}>
+                    <div className="icon-button" 
+                         onClick={() => setOpen(!open)}
+                       
+                           >
                         {user ? <IcAccounts /> : <IcUser />}
                     </div>
-                    {open && <DropdownMenu setOpen={setOpen} handleInfoChange={handleInfoChange} user={user} />}
+                    {open && <DropdownMenu setOpen={setOpen} 
+                                           handleInfoChange={handleInfoChange} 
+                                           user={user}  
+                                           />}
                 </li>
             </ul>
         </nav>

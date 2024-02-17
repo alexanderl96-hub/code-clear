@@ -78,8 +78,7 @@ export default function ParentComponent({ toggleLogo }) {
   const handleFixSubmit = (e) => {
     e.preventDefault();
     axios.post(`${API}/eslint/fix`, input).then((res) => {
-      console.log(res.data.fixedResult[0].output, 'check last');
-      // setLast(res.data.fixedResult[0].output);
+       setLast(res.data.fixedResult[0].source);
     });
   };
 

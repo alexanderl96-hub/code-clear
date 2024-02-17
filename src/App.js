@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import logo from "./Assets/icons/Logo.png";
 import './App.css';
-// import Navbar from "./Components/Navbar/Navbar";
+import Navbar from "./Components/Navbar/Navbar";
 import { UserProvider } from "./Providers/UserProviders";
 import styled, { ThemeProvider } from "styled-components";
 import Containered from "./Components/Containered";
@@ -42,10 +42,9 @@ function App() {
     <div className="App">
       {/* <UserProvider> */}
         <Router>
-          {/* <Navbar /> */}
+          <Navbar />
           <Containered />  
-            {!countInTimeout ? (
-             
+            {!countInTimeout ? (            
               <ThemeProvider theme={themeMode}>
                 <Container>
                   <GlobalStyle />
